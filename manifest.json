@@ -1,0 +1,20 @@
+{
+  "manifest_version": "2",
+  "api_version": "1",
+  "name": "Dictionary",
+  "description": "Get release date for movies",
+  "developer_name": "Yunik Maharjan",
+  "icon": "images/icon.png",
+  "options": {
+    "query_debounce": 0.3
+  },
+  "preferences": [
+    {
+      "id": "keyword",
+      "type": "keyword",
+      "name": "Search Definition",
+      "description": "use keyword to activate this plugin",
+      "default_value": "r"
+    }
+  ]
+}
