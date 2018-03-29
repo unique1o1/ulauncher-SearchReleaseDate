@@ -1,3 +1,5 @@
+<<<<<<< HEAD
+
 # ulauncher-SearchReleaseDate
 
 Extension for [ulauncher](https://ulauncher.io/) to Search for release data for movies and movies played by actors.
@@ -20,4 +22,8 @@ Feel free to [Open an issue](https://github.com/unique1o1/ulauncher-SearchDefini
 
 ## License
 
-MIT © 2018 unique1o1
+# MIT © 2018 unique1o1
+
+# ulauncher-SearchReleaseData
+
+> > > > > > > 19299111acba4089a6384da75e789cbe4f58d261
