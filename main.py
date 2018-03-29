@@ -66,6 +66,9 @@ class KeywordQueryEventListener(EventListener):
                 if args[0] == 'p':
                     result = requests.get(url_person, params={
                         'api_key': api_key, 'language': 'en-US', 'query': " ".join(args[1:]), 'page': 1, 'include_adult': True}).json()
+                    if len(result['results']) == 0:
+                        raise ValueError('Result not found')
+
                     name = result['results'][0]['name']
                     result = result['results'][0]['known_for']
 
@@ -73,6 +76,8 @@ class KeywordQueryEventListener(EventListener):
 
                     result = requests.get(url_movie, params={
                         'api_key': api_key, 'language': 'en-US', 'query': " ".join(args[0:]), 'page': 1, 'include_adult': True}).json()
+                    if len(result['results']) == 0:
+                        raise ValueError('Result not found')
                     result = result['results']
 
                 for i in range(8 if len(result) > 8 else len(result)):
@@ -87,7 +92,8 @@ class KeywordQueryEventListener(EventListener):
 
             except Exception as e:
                 logger.warning(e)
-                error_info = "Coundn't find release data for {}".format(arg)
+                error_info = "Coundn't find release data for {}".format(
+                    " ".join(args[1:]) if args[0] == 'p' else " ".join(args[0:]))
                 items = [ExtensionSmallResultItem(icon='images/error.png',
                                                   name=error_info,
                                                   on_enter=CopyToClipboardAction(error_info))]
