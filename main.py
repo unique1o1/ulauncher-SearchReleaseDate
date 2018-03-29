@@ -61,25 +61,28 @@ class KeywordQueryEventListener(EventListener):
         if arg is None:
             items = self.__help()
         else:
-            args = arg.split(' ')
-            if args[0] == 'p':
-                result = requests.get(url_person, params={
-                    'api_key': api_key, 'language': 'en-US', 'query': arg[1:], 'page': 1, 'include_adult': True}).json()
-                name = result['results'][0]['name']
-                result = result['results'][0]['known_for']
-
-            else:
-
-                result = requests.get(url_movie, params={
-                    'api_key': api_key, 'language': 'en-US', 'query': arg[0:], 'page': 1, 'include_adult': True}).json()
-                result = result['results']
             try:
+                args = arg.split(' ')
+                if args[0] == 'p':
+                    result = requests.get(url_person, params={
+                        'api_key': api_key, 'language': 'en-US', 'query': " ".join(args[1:]), 'page': 1, 'include_adult': True}).json()
+                    name = result['results'][0]['name']
+                    result = result['results'][0]['known_for']
+
+                else:
+
+                    result = requests.get(url_movie, params={
+                        'api_key': api_key, 'language': 'en-US', 'query': " ".join(args[0:]), 'page': 1, 'include_adult': True}).json()
+                    result = result['results']
 
                 for i in range(8 if len(result) > 8 else len(result)):
-
+                    if 'title' in result[i]:
+                        title = result[i]['title']
+                    else:
+                        title = result[i]['name']
                     items.append(ExtensionResultItem(icon='images/icon.png',
                                                      name=name if args[0] == 'p' else result[i]['title'],
-                                                     description=result[i]['title'] if args[0] == 'p' else result[i]['release_date']
+                                                     description=title if args[0] == 'p' else result[i]['release_date'], on_enter=CopyToClipboardAction(title if args[0] == 'p' else result[i]['release_date'])
                                                      ))
 
             except Exception as e:
