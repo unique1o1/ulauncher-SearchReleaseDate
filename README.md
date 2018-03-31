@@ -2,11 +2,11 @@
 
 Extension for [ulauncher](https://ulauncher.io/) to Search for release data for movies and movies played by actors.
 
-![help](https://i.imgur.com/RN57q9g.png)
+
 
 1.  Type the movie/ actor you want search for.
 
-![search](https://i.imgur.com/rT5rwVh.png)
+![search](https://i.imgur.com/oLJaI7y.png)
 
 2.  type `*keyword* p` to search for movies played that actors.
 
