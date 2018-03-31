@@ -10,7 +10,7 @@ Extension for [ulauncher](https://ulauncher.io/) to Search for release data for 
 
 2.  type `*keyword* p` to search for movies played that actors.
 
-![search](https://i.imgur.com/8bQQRKa.png)
+![search](https://i.imgur.com/YPjLAOU.png)
 
 ## Contribute
 
