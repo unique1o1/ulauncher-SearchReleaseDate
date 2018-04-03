@@ -12,8 +12,8 @@
     {
       "id": "keyword",
       "type": "keyword",
-      "name": "Search Definition",
-      "description": "use keyword to activate this plugin",
+      "name": "Search ReleaseDate",
+      "description": "use your keyword to activate this plugin",
       "default_value": "r"
     }
   ]
