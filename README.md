@@ -14,7 +14,7 @@ Extension for [ulauncher](https://ulauncher.io/) to Search for release data for 
 
 ## Contribute
 
-Feel free to [Open an issue](https://github.com/unique1o1/ulauncher-SearchDefinition/).
+Feel free to [Open an issue](https://github.com/unique1o1/ulauncher-SearchReleaseDate/issues).
 
 ## License
 
