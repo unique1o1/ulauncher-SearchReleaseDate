@@ -18,4 +18,4 @@ Feel free to [Open an issue](https://github.com/unique1o1/ulauncher-SearchReleas
 
 ## License
 
-# MIT © 2018 unique1o1
+## MIT © 2018 unique1o1
