@@ -15,35 +15,12 @@ logger = logging.getLogger(__name__)
 api_key = 'f0987a1113ab1a3b6cc3ac4b3cc29770'
 url_movie = 'https://api.themoviedb.org/3/search/movie'
 url_person = 'https://api.themoviedb.org/3/search/person'
-# class PreferencesUpdateEventListener(EventListener):
-#     def on_event(self, event, extension):
-#         if event.id == 'limit':
-#             getupdate.option = event.new_value
-
-#         elif event.id == 'options':
-
-#             getupdate.option = event.new_value
-#             if getupdate.option == 'offline':
-#                 getdictionary.init_dictionary()
-
-
-# class PreferencesEventListener(EventListener):
-#     def on_event(self, event, extension):
-#         getupdate.limit = event.preferences['limit']
-#         getupdate.option = event.preferences['options']
-
-#         if event.preferences['options'] == 'offline':
-
-#             getdictionary.init_dictionary()
 
 
 class DemoExtension(Extension):
 
     def __init__(self):
         super(DemoExtension, self).__init__()
-        # self.subscribe(PreferencesEvent, PreferencesEventListener())
-        # self.subscribe(PreferencesUpdateEvent,
-        #                PreferencesUpdateEventListener())
         self.subscribe(KeywordQueryEvent, KeywordQueryEventListener())
 
 
