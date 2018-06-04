@@ -1,7 +1,7 @@
 {
   "manifest_version": "2",
   "api_version": "1",
-  "name": "Dictionary",
+  "name": "Release Date Finder",
   "description": "Get release date for movies",
   "developer_name": "Yunik Maharjan",
   "icon": "images/icon.png",
