@@ -12,6 +12,13 @@ Extension for [ulauncher](https://ulauncher.io/) to Search for release data for 
 
 ![search](https://i.imgur.com/YPjLAOU.png)
 
+## Installation
+
+    git clone https://github.com/unique1o1/ulauncher-SearchReleaseDate/
+    cp -R ulauncher-SearchReleaseDate ~/cache/ulauncher_cache/extensions
+    sudo pip2.7 install requests
+
+
 ## Contribute
 
 Feel free to [Open an issue](https://github.com/unique1o1/ulauncher-SearchReleaseDate/issues).
